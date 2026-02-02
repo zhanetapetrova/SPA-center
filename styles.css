@@ -182,7 +182,6 @@ a {
 }
 
 .grid article,
-.placeholder,
 .contact-grid > div {
   background: var(--surface);
   padding: 20px;
@@ -190,13 +189,50 @@ a {
   box-shadow: 0 10px 24px rgba(31, 24, 20, 0.08);
 }
 
-.gallery .placeholder {
-  text-align: center;
+.grid article img,
+.hero-card img,
+.gallery img {
+  width: 100%;
+  display: block;
+  border-radius: calc(var(--radius) - 6px);
+  object-fit: cover;
+}
+
+.grid article img {
+  height: 180px;
+  margin-bottom: 16px;
+}
+
+.hero-card {
+  display: grid;
+  gap: 16px;
+}
+
+.hero-card img {
+  height: 180px;
+}
+
+.hero-card-body span {
+  display: block;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.gallery figure {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 24px rgba(31, 24, 20, 0.08);
+  overflow: hidden;
+}
+
+.gallery img {
+  height: 200px;
+}
+
+.gallery figcaption {
+  padding: 14px 18px 18px;
   font-weight: 600;
   color: var(--muted);
-  min-height: 120px;
-  display: grid;
-  place-items: center;
 }
 
 .contact-grid {
