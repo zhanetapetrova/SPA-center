@@ -261,6 +261,82 @@ a {
   color: var(--muted);
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(31, 24, 20, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 200;
+}
+
+.modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: min(520px, 94vw);
+  padding: 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.modal-subtitle {
+  color: var(--muted);
+}
+
+.icon-button {
+  border: none;
+  background: var(--accent-soft);
+  color: var(--accent);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.booking-form {
+  display: grid;
+  gap: 16px;
+}
+
+.booking-form label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d9cfc7;
+  font: inherit;
+  background: #fff;
+}
+
+.helper-text {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 @media (max-width: 860px) {
   .main-nav {
     display: none;

@@ -12,20 +12,22 @@
         <a class="logo" href="#">SPA Center</a>
         <nav class="main-nav" aria-label="Primary">
           <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
       </div>
       <nav id="nav-menu" class="mobile-nav" aria-label="Mobile">
         <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -42,8 +44,8 @@
               best every day.
             </p>
             <div class="hero-actions">
-              <a class="btn primary" href="#services">Explore Services</a>
-              <a class="btn ghost" href="#contact">Book a Visit</a>
+              <a class="btn primary" href="services.html">Explore Services</a>
+              <button class="btn ghost" id="open-booking" type="button">Book a Visit</button>
             </div>
           </div>
           <div class="hero-card">
@@ -57,82 +59,38 @@
         </div>
       </section>
 
-      <section class="content" id="services">
+      <section class="content">
         <div class="container">
-          <h2>Our Services</h2>
-          <div class="grid">
-            <article>
-              <img src="img/therapies.jpg" alt="Massage therapy session" loading="lazy" />
-              <h3>Massage Therapy</h3>
-              <p>Tailored sessions that melt away tension and boost circulation.</p>
-            </article>
-            <article>
-              <img src="img/facial%20massage.jpg" alt="Facial ritual treatment" loading="lazy" />
-              <h3>Facial Rituals</h3>
-              <p>Glow-enhancing treatments using nourishing botanical blends.</p>
-            </article>
-            <article>
-              <img src="img/therapies-2.jpg" alt="Relaxing body therapy" loading="lazy" />
-              <h3>Body Treatments</h3>
-              <p>Detoxifying scrubs and wraps that leave skin soft and renewed.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="content alt" id="about">
-        <div class="container">
-          <h2>About SPA Center</h2>
+          <h2>Our Wellness Promise</h2>
           <p>
-            SPA Center is a tranquil wellness haven where modern luxury meets ancient
-            healing practices. Our expert therapists craft personalized experiences to
-            match your unique wellness goals.
+            Step into a calming escape designed around your comfort. Explore our full
+            range of services, meet our expert therapists, and discover the spa rituals
+            that help you feel renewed.
           </p>
         </div>
       </section>
 
-      <section class="content" id="gallery">
-        <div class="container">
-          <h2>Gallery</h2>
-          <div class="grid gallery">
-            <figure>
-              <img src="img/background.jpg" alt="Calming spa space" loading="lazy" />
-              <figcaption>Calming Space</figcaption>
-            </figure>
-            <figure>
-              <img src="img/massage-couples.jpg" alt="Couples massage room" loading="lazy" />
-              <figcaption>Treatment Room</figcaption>
-            </figure>
-            <figure>
-              <img src="img/facial%20massage2.jpg" alt="Facial massage ritual" loading="lazy" />
-              <figcaption>Herbal Bar</figcaption>
-            </figure>
+      <div class="modal" id="booking-modal" aria-hidden="true" role="dialog" aria-labelledby="booking-title">
+        <div class="modal-card" role="document">
+          <div class="modal-header">
+            <h2 id="booking-title">Plan Your Visit</h2>
+            <button class="icon-button" id="close-booking" type="button" aria-label="Close booking planner">✕</button>
           </div>
+          <p class="modal-subtitle">Available Monday to Friday, 09:00–16:30.</p>
+          <form class="booking-form">
+            <label>
+              Select a date
+              <input id="booking-date" name="booking-date" type="date" required />
+            </label>
+            <label>
+              Select a time
+              <select id="booking-time" name="booking-time" required></select>
+            </label>
+            <p class="helper-text" id="booking-helper">Weekend dates are not available.</p>
+            <button class="btn primary" type="submit">Request Appointment</button>
+          </form>
         </div>
-      </section>
-
-      <section class="content alt" id="contact">
-        <div class="container">
-          <h2>Contact</h2>
-          <p>Ready to unwind? Reach out to schedule your visit.</p>
-          <div class="contact-grid">
-            <div>
-              <h3>Hours</h3>
-              <p>Mon–Sat: 9am–8pm</p>
-              <p>Sun: 10am–6pm</p>
-            </div>
-            <div>
-              <h3>Location</h3>
-              <p>123 Serenity Lane, Wellness City</p>
-              <p>(555) 010-2026</p>
-            </div>
-            <div>
-              <h3>Email</h3>
-              <p>hello@spacenter.com</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </main>
 
     <footer class="site-footer">
